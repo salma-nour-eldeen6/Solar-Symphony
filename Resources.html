@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Educational Resources and Space Weather Tools</title>
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+ 
+            color: #fff;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+
+        h1, h2 {
+            color: #1b6ca8; /* Blue color for headers */
+            margin-top: 20px;
+            font-size: 3em;
+             
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 50px auto;
+            padding: 20px;
+        }
+
+        .resource-card {
+            background-color: #1b263b; /* Dark blue background */
+            border-radius: 10px;
+            margin: 15px;
+            padding: 20px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+        }
+
+        .resource-card h3 {
+            color: #1b6ca8; /* Blue color for card titles */
+            font-size: 2em;
+             
+            margin: 20px 0 10px 0;
+        }
+
+        .resource-card p {
+            font-size: 1.2em;
+            line-height: 1.6;
+            color: #ddd;
+        }
+
+        .resource-card a {
+            color: #1b6ca8; /* Blue links */
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .resource-card a:hover {
+            text-decoration: underline;
+            color: #fff; /* White on hover */
+        }
+    </style>
+</head>
+<body>
+    <canvas id="auroraCanvas"></canvas>
+    <div id="header">
+        <div>
+            <a href="index.html" class="logo">
+                <img src="images/final2.png" alt="" width="150" height="150">
+            </a>
+            
+            <ul id="navigation">
+                <li class="selected">
+                    <a href="index.html">Home</a>
+                </li>
+ 
+                <li class="menu">
+                    <a href="may 2024.html">May 2024</a>
+                    <ul class="primary">
+                        <!-- <li>
+                            <a href="proj1.html">proj 1</a>
+                        </li> -->
+                    </ul>
+                </li>
+                <!-- <li class="menu">
+                    <a href="blog.html">Blog</a>
+                    <ul class="secondary">
+                        <li>
+                            <a href="singlepost.html">Single post</a>
+                        </li>
+                    </ul>
+                </li> -->
+                <li>
+                    <a href="effects.html">Effects</a>
+                </li>
+                <li>
+                    <a href="explor.html">Explore</a>
+                </li>
+                <li>
+                    <a href="AR.html">AR</a>
+                </li>
+                <li>
+                    <a href="about.html">About</a>
+                </li>
+                <li>
+                    <a href="Resources.html">Resources</a>
+                </li>
+ 
+            </ul>
+        </div>
+    </div>
+
+    <h1>Educational Resources and Space Weather Tools</h1>
+    <div class="container">
+
+        <!-- NASA Space Weather Resources Card -->
+        <div class="resource-card">
+            <h3>NASA Space Weather Resources</h3>
+            <p>Explore NASA’s images, data, and tools related to space weather. View solar activity, geomagnetic data, and more.</p>
+            <a href="https://sdo.gsfc.nasa.gov/data/" target="_blank">Visit Solar Dynamic Observatory</a><br>
+            <a href="https://omniweb.gsfc.nasa.gov/" target="_blank">Solar Wind Magnetic Field & Plasma Data</a><br>
+            <a href="https://aurorasaurus.org/" target="_blank">Aurorasaurus Citizen Science Project</a>
+        </div>
+
+        <!-- Space Agency Resources Card -->
+        <div class="resource-card">
+            <h3>Space Agency Resources</h3>
+            <p>Learn how other space agencies study solar-terrestrial science and contribute to monitoring space weather.</p>
+            <a href="https://www.asc-csa.gc.ca/eng/sciences/solar-terrestrial.asp" target="_blank">Canadian Space Agency: Solar-Terrestrial Science</a><br>
+            <a href="https://www.asc-csa.gc.ca/eng/satellites/cassiope.asp" target="_blank">CASSIOPE Spacecraft</a><br>
+            <a href="https://github.com/asc-csa/CASSIOPE-Tutorial" target="_blank">CASSIOPE Data Tutorial</a>
+        </div>
+
+        <!-- Educational Videos Card -->
+        <div class="resource-card">
+            <h3>Educational Videos</h3>
+            <p>Watch engaging videos that explain the science behind solar storms and their impacts on Earth.</p>
+            <a href="https://www.youtube.com/user/NASAtelevision" target="_blank">Watch NASA Videos on YouTube</a>
+        </div>
+
+        <!-- Downloadable Materials Card -->
+        <div class="resource-card">
+            <h3>Educational Materials</h3>
+            <p>Get educational kits and lesson plans designed for teachers and students to enhance learning about space weather.</p>
+            <a href="https://spaceplace.nasa.gov/" target="_blank">Educational Materials</a>
+        </div>
+
+    </div>
+
+
+    <script src="JS/background.js"></script>
+
+</body>
+</html>

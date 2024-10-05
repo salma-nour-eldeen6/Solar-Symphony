@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Space Weather Experience</title>
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #fff;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100%;
+            position: relative; /* لجعل الفيديو كخلفية */
+            overflow: hidden; /* إخفاء المحتوى الزائد */
+        }
+        video {
+            position: absolute; /* جعل الفيديو في الخلفية */
+            top: 50%;
+            left: 50%;
+            min-width: 100%;
+            min-height: 100%;
+            width: auto;
+            height: auto;
+            z-index: -1; /* وضع الفيديو خلف المحتوى */
+            transform: translate(-50%, -50%);
+            object-fit: cover; /* تغطية الخلفية بشكل كامل */
+        }
+        h1 {
+            margin: 20px;
+            color: #FFD700;
+            z-index: 1; /* وضع العنوان فوق الفيديو */
+        }
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            max-width: 1200px;
+            width: 100%;
+            z-index: 1; /* وضع المحتوى فوق الفيديو */
+        }
+        .widget {
+            background: rgba(0, 0, 0, 0.5);
+            padding: 20px;
+            border-radius: 10px;
+            margin: 10px;
+            width: 300px;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+        .widget h2 {
+            color: #FFD700;
+            margin-bottom: 10px;
+        }
+        canvas {
+            width: 100%;
+            height: 300px;
+        }
+        #flareSlider {
+            width: 100%;
+            margin: 20px 0;
+        }
+        #flareImage {
+            width: 100%;
+            height: 150px;
+            margin-top: 10px;
+        }
+        #flareInfo {
+            margin-top: 10px;
+            font-size: 18px;
+            color: #FFD700;
+        }
+    </style>
+</head>
+ 
+<body>
+    <div id="header">
+        <div>
+            <a href="index.html" class="logo">
+                <img src="images/final2.png" alt="" width="150" height="150">
+            </a>
+            
+            <ul id="navigation">
+                <li class="selected">
+                    <a href="index.html">Home</a>
+                </li>
+ 
+                <li class="menu">
+                    <a href="may 2024.html">May 2024</a>
+                    <ul class="primary">
+                        <!-- <li>
+                            <a href="proj1.html">proj 1</a>
+                        </li> -->
+                    </ul>
+                </li>
+                <!-- <li class="menu">
+                    <a href="blog.html">Blog</a>
+                    <ul class="secondary">
+                        <li>
+                            <a href="singlepost.html">Single post</a>
+                        </li>
+                    </ul>
+                </li> -->
+                <li>
+                    <a href="effects.html">Effects</a>
+                </li>
+                <li>
+                    <a href="explor.html">Explore</a>
+                </li>
+                <li>
+                    <a href="AR.html">AR</a>
+                </li>
+                <li>
+                    <a href="about.html">About</a>
+                </li>
+                <li>
+                    <a href="Resources.html">Resources</a>
+                </li>
+ 
+            </ul>
+        </div>
+    </div>
+ 
+    <video autoplay loop muted>
+        <source src="videos\180527-864656573.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+
+    <h1>Explore The Flares With Yourself</h1>
+    <div class="container">
+        <!-- Solar Flare Slider -->
+        <div class="widget">
+            <h2>Solar Flare Intensity</h2>
+            <input type="range" id="flareSlider" min="0" max="100" value="50">
+            <img id="flareImage" src="https://sdo.gsfc.nasa.gov/assets/img/latest/latest_1024_0211.jpg" alt="Solar Flare Image">
+            <p id="flareInfo">Current Flare Intensity: Moderate</p>
+        </div>
+
+        <!-- Live Data Charts -->
+        <div class="widget">
+            <h2>Solar Wind Speed</h2>
+            <canvas id="windChart"></canvas>
+        </div>
+
+        <div class="widget">
+            <h2>Geomagnetic Activity</h2>
+            <canvas id="geoChart"></canvas>
+        </div>
+    </div>
+
+
+    
+     
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+        // Initialize charts with real datasets
+        const windChart = new Chart(document.getElementById('windChart'), {
+            type: 'line',
+            data: {
+                labels: ['1min', '5min', '10min', '15min', '20min'],
+                datasets: [
+                    {
+                        label: 'C-Class Solar Flare',
+                        data: [320, 330, 340, 310, 325],
+                        borderColor: 'rgba(0, 255, 0, 1)', // Green for low intensity
+                        fill: false
+                    },
+                    {
+                        label: 'M-Class Solar Flare',
+                        data: [450, 470, 490, 460, 480],
+                        borderColor: 'rgba(255, 215, 0, 1)', // Yellow for medium intensity
+                        fill: false
+                    },
+                    {
+                        label: 'X-Class Solar Flare',
+                        data: [700, 720, 680, 740, 710],
+                        borderColor: 'rgba(255, 0, 0, 1)', // Red for high intensity
+                        fill: false
+                    }
+                ]
+            },
+            options: {
+                scales: {
+                    y: { beginAtZero: false }
+                }
+            }
+        });
+
+        const geoChart = new Chart(document.getElementById('geoChart'), {
+            type: 'line',
+            data: {
+                labels: ['1min', '5min', '10min', '15min', '20min'],
+                datasets: [
+                    {
+                        label: 'C-Class Solar Flare',
+                        data: [2, 2, 3, 3, 4],
+                        borderColor: 'rgba(0, 255, 0, 1)', // Green for low intensity
+                        fill: false
+                    },
+                    {
+                        label: 'M-Class Solar Flare',
+                        data: [4, 5, 5, 5, 4],
+                        borderColor: 'rgba(255, 215, 0, 1)', // Yellow for medium intensity
+                        fill: false
+                    },
+                    {
+                        label: 'X-Class Solar Flare',
+                        data: [6, 7, 8, 7, 6],
+                        borderColor: 'rgba(255, 0, 0, 1)', // Red for high intensity
+                        fill: false
+                    }
+                ]
+            },
+            options: {
+                scales: {
+                    y: { beginAtZero: true }
+                }
+            }
+        });
+
+        // Solar Flare Slider Logic with Real Flare Shapes
+        document.getElementById('flareSlider').addEventListener('input', function (e) {
+            const intensity = e.target.value;
+            const flareInfo = document.getElementById('flareInfo');
+            const flareImage = document.getElementById('flareImage');
+
+            // Update the flare intensity text and change the flare image
+            if (intensity < 30) {
+                flareInfo.textContent = "Current Flare Intensity: Low";
+                flareImage.src = 'https://sdo.gsfc.nasa.gov/assets/img/latest/latest_1024_0211.jpg';  // Low-intensity image
+
+                // Update graph data for low intensity
+                windChart.data.datasets[0].data = [320, 330, 340, 310, 325]; // C-Class data
+                windChart.data.datasets[1].data = [450, 470, 490, 460, 480]; // M-Class data
+                windChart.data.datasets[2].data = [700, 720, 680, 740, 710]; // X-Class data
+
+                geoChart.data.datasets[0].data = [2, 2, 3, 3, 4]; // C-Class data
+                geoChart.data.datasets[1].data = [4, 5, 5, 5, 4]; // M-Class data
+                geoChart.data.datasets[2].data = [6, 7, 8, 7, 6]; // X-Class data
+            } else if (intensity < 70) {
+                flareInfo.textContent = "Current Flare Intensity: Moderate";
+                flareImage.src = 'https://sdo.gsfc.nasa.gov/assets/img/latest/latest_256_0094.jpg';  // Moderate-intensity image
+                
+                // Update graph data for moderate intensity
+                windChart.data.datasets[0].data = [400, 410, 420, 430, 440]; // C-Class data
+                windChart.data.datasets[1].data = [480, 490, 500, 510, 520]; // M-Class data
+                windChart.data.datasets[2].data = [700, 710, 720, 730, 740]; // X-Class data
+
+                geoChart.data.datasets[0].data = [3, 4, 5, 4, 3]; // C-Class data
+                geoChart.data.datasets[1].data = [5, 6, 7, 6, 5]; // M-Class data
+                geoChart.data.datasets[2].data = [8, 9, 10, 9, 8]; // X-Class data
+            } else {
+                flareInfo.textContent = "Current Flare Intensity: High";
+                flareImage.src = 'https://sdo.gsfc.nasa.gov/assets/img/latest/latest_256_0304.jpg';  // High-intensity image
+                
+                // Update graph data for high intensity
+                windChart.data.datasets[0].data = [500, 520, 540, 560, 580]; // C-Class data
+                windChart.data.datasets[1].data = [600, 620, 640, 660, 680]; // M-Class data
+                windChart.data.datasets[2].data = [800, 820, 840, 860, 880]; // X-Class data
+
+                geoChart.data.datasets[0].data = [5, 6, 7, 8, 9]; // C-Class data
+                geoChart.data.datasets[1].data = [7, 8, 9, 10, 11]; // M-Class data
+                geoChart.data.datasets[2].data = [10, 11, 12, 11, 10]; // X-Class data
+            }
+
+            // Update the charts
+            windChart.update();
+            geoChart.update();
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,1361 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>May 2024 Solar Storm Timeline</title>
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #0d1b2a;
+            color: #ffffff;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+
+        h1 {
+            color: #529bee;
+            
+        }
+
+        p {
+            color: #a9a9a9;
+        }
+
+        .timeline {
+            position: relative;
+            max-width: 1200px;
+            margin: 50px auto;
+        }
+
+        .timeline::after {
+            content: '';
+            position: absolute;
+            width: 6px;
+            background-color: #1b6ca8;
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            margin-left: -3px;
+        }
+
+        .timeline-event {
+            padding: 20px 40px;
+            position: relative;
+            width: 50%;
+            box-sizing: border-box;
+        }
+
+        .timeline-event.left {
+            left: 0;
+        }
+
+        .timeline-event.right {
+            left: 50%;
+        }
+
+        .timeline-event::after {
+            content: '';
+            position: absolute;
+            width: 25px;
+            height: 25px;
+            border-radius: 50%;
+            background-color: #1b6ca8;
+            top: 15px;
+            left: -13px;
+            box-shadow: 0 0 10px 2px #3786c2;
+        }
+
+        .timeline-event.right::after {
+            left: auto;
+            right: -13px;
+        }
+
+        .timeline-content {
+            background-color: rgba(255, 255, 255, 0.1);
+            padding: 20px;
+            border-radius: 6px;
+            box-shadow: 0 2px 10px rgba(27, 108, 168, 0.2);
+            text-align: left;
+            color: #fff;
+        }
+
+        .timeline-event h3 {
+            margin: 0;
+            font-size: 1.5em;
+            color: #1b6ca8;
+        }
+
+        .event-detail {
+            display: none;
+            margin-top: 10px;
+            color: #ffffff;
+        }
+
+        .event-detail img {
+            max-width: 100%;
+            height: auto;
+            margin-top: 10px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(27, 108, 168, 0.4);
+        }
+
+        .btn-show-details {
+            margin-top: 10px;
+            padding: 8px 15px;
+            background-color: #1b6ca8;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn-show-details:hover {
+            background-color: #297db9;
+        }
+
+        /* Adding glow effect for space theme */
+        
+
+       
+
+        
+        
+        
+     
+        
+        #about-section {
+            position: relative; 
+            background-image: url('images/5797345.jpg'); /* رابط الصورة */
+            background-size: cover; /* تجعل الصورة تغطي الخلفية */
+            background-position: center; /* تحديد موقع الصورة */
+            height: 80vh;  
+            width: 100%;
+            display: flex; /* تمكين تنسيق العناصر داخل القسم */
+            justify-content: center; 
+            align-items: center;
+        }
+        
+        #about-section .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(0, 0, 0, 0.5); /* طبقة شفافة */
+            z-index: 1; /* خلف المحتوى */
+        }
+        
+        #about-section .content_TEXT {
+            position: relative;
+            z-index: 2; /* فوق الطبقة الشفافة */
+            color: white; /* لون النص */
+            text-align: center; /* محاذاة النص إلى المنتصف */
+            max-width: 800px; /* تحديد عرض النص */
+            padding: 20px; 
+        }
+        
+        #about-section h1 {
+            font-size: 3rem; /* حجم عنوان النص */
+            margin-bottom: 1rem; /* مساحة تحت العنوان */
+        }
+        
+        #about-section p {
+            font-size: 1.5rem; /* حجم نص الفقرة */
+            margin: 0 auto; /* محاذاة الفقرة */
+        }
+
+        
+        
+    </style>
+</head>
+<body>
+    <div id="header">
+        <div>
+            <a href="index.html" class="logo">
+                <img src="images/final2.png" alt="" width="150" height="150">
+            </a>
+            
+            <ul id="navigation">
+                <li class="selected">
+                    <a href="index.html">Home</a>
+                </li>
+ 
+                <li class="menu">
+                    <a href="may 2024.html">May 2024</a>
+                    <ul class="primary">
+                        <!-- <li>
+                            <a href="proj1.html">proj 1</a>
+                        </li> -->
+                    </ul>
+                </li>
+                <!-- <li class="menu">
+                    <a href="blog.html">Blog</a>
+                    <ul class="secondary">
+                        <li>
+                            <a href="singlepost.html">Single post</a>
+                        </li>
+                    </ul>
+                </li> -->
+                <li>
+                    <a href="effects.html">Effects</a>
+                </li>
+                <li>
+                    <a href="explor.html">Explore</a>
+                </li>
+                <li>
+                    <a href="AR.html">AR</a>
+                </li>
+                <li>
+                    <a href="about.html">About</a>
+                </li>
+                <li>
+                    <a href="Resources.html">Resources</a>
+                </li>
+ 
+            </ul>
+        </div>
+    </div>
+    <div id="about-section">
+        <div class="overlay"></div>
+        <div class="content_TEXT">
+            <h1>Exploring the May 2024 Solar Storm Events: A Journey into Cosmic Mysteries!</h1>
+            <p>In May 2024, Earth experienced astonishing solar storms that impacted daily life and technology worldwide. From powerful solar flares to mesmerizing light displays, get ready to uncover the key events that shaped this historic month.</p>
+        </div>
+    </div>
+    
+    
+    
+    
+    
+    
+    
+
+    <h1 class="glow">May 2024 Solar Storm Events Timeline</h1>
+    <p>Explore the key events of the May 2024 solar storms, including powerful solar flares, CMEs, and auroras visible across the globe.</p>
+
+    <div class="timeline">
+        <!-- Event 1 -->
+        <div class="timeline-event left">
+            <div class="timeline-content">
+                <h3>May 3-9: Solar Flares Recorded</h3>
+                <p>NASA’s Solar Dynamics Observatory recorded 82 solar flares, mostly from active regions AR 13663 and AR 13664.</p>
+                <button class="btn-show-details">Show Details</button>
+                <div class="event-detail">
+                    <p>These solar flares were the start of what would become one of the strongest solar storms in 20 years.</p>
+                    <img src="images/May6-3.jpg" alt="Solar Flares May 3-9, 2024" style="height: 300px;">
+                </div>
+            </div>
+        </div>
+
+        <!-- Event 2 -->
+        <div class="timeline-event right">
+            <div class="timeline-content">
+                <h3>May 7: First X-Class Solar Flare</h3>
+                <p>Two powerful X-class solar flares were observed, signaling the onset of a massive solar storm.</p>
+                <button class="btn-show-details">Show Details</button>
+                <div class="event-detail">
+                    <p>These flares, followed by multiple CMEs, stormed toward Earth, causing major geomagnetic activity.</p>
+                    <img src="images/May8-1.jpg" alt="Solar Flare May 7, 2024">
+                </div>
+            </div>
+        </div>
+
+        <!-- Event 3 -->
+        <div class="timeline-event left">
+            <div class="timeline-content">
+                <h3>May 10: Massive Geomagnetic Storm</h3>
+                <p>As CMEs hit Earth, they triggered a G5 geomagnetic storm, the strongest since 2003.</p>
+                <button class="btn-show-details">Show Details</button>
+                <div class="event-detail">
+                    <p>The storm produced brilliant auroras visible in many parts of the world, including lower latitudes like the southern U.S. and northern India.</p>
+                    <img src="images/aurora_may_10.jpg" alt="Aurora May 10, 2024">
+                </div>
+            </div>
+        </div>
+
+        <!-- Event 4 -->
+        <div class="timeline-event right">
+            <div class="timeline-content">
+                <h3>May 11: Ongoing Solar Storm</h3>
+                <p>The storm persisted, with CMEs continuing to affect Earth's magnetic field.</p>
+                <button class="btn-show-details">Show Details</button>
+                <div class="event-detail">
+                    <p>This historic event caused major auroras and technology disruptions, including satellite drag and communication issues.</p>
+                    <img src="images/x-class-May11.gif" alt="CME Impact May 11, 2024" style="height: 300px;">
+                </div>
+            </div>
+        </div>
+
+        <!-- Event 5 -->
+        <div class="timeline-event left">
+            <div class="timeline-content">
+                <h3>May 14: Largest X-Class Flare</h3>
+                <p>The Sun released the largest solar flare of Solar Cycle 25, classified as X8.7.</p>
+                <button class="btn-show-details">Show Details</button>
+                <div class="event-detail">
+                    <p>This powerful flare caused further disturbances to satellites and communications systems.</p>
+                    <img src="images/xflare_may_14.jpg" alt="X8.7 Flare May 14, 2024">
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+        // Toggle event details
+        const buttons = document.querySelectorAll('.btn-show-details');
+        buttons.forEach(button => {
+            button.addEventListener('click', () => {
+                const eventDetail = button.nextElementSibling;
+                if (eventDetail.style.display === 'block') {
+                    eventDetail.style.display = 'none';
+                } else {
+                    eventDetail.style.display = 'block';
+                }
+            });
+        });
+    </script>
+</body>
+
+
+
+
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>May 2024 Solar Events Timeline</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #0a0f1e; /* Dark space background */
+            color: #fff;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+
+        h1 {
+            text-align: center;
+            margin-top: 20px;
+            color: #529bee;
+            font-size: 3em;
+             
+        }
+
+        .carousel-container {
+            max-width: 1200px;
+            margin: 50px auto;
+            overflow: hidden;
+            position: relative;
+            border-radius: 10px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+            background-color: #1b263b; /* Dark blue background */
+        }
+
+        .carousel {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+            width: calc(100% * 5); /* Assume 5 slides */
+        }
+
+        .slide {
+            min-width: 100%;
+            box-sizing: border-box;
+            padding: 20px;
+            text-align: left;
+        }
+
+        /* Flexbox for horizontal alignment */
+        .slide-content {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .slide-content img, .slide-content video {
+            width: 300px;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+        }
+
+        .slide h3 {
+            font-size: 2em;
+            margin: 20px 0 10px 0;
+            color: #1b6ca8;
+            text-shadow: 2px 2px 10px #1b6ca8;
+        }
+
+        .slide p {
+            font-size: 1.2em;
+            line-height: 1.6;
+            color: #ddd;
+            flex: 1; /* Text takes remaining space */
+        }
+
+        .timeline-details {
+            margin-top: 20px;
+            background-color: rgba(255, 255, 255, 0.1);
+            padding: 15px;
+            border-radius: 10px;
+        }
+
+        .timeline-details h4 {
+            color: #1b6ca8;
+        }
+
+        .carousel-navigation {
+            position: absolute;
+            top: 50%;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            transform: translateY(-50%);
+        }
+
+        .carousel-navigation button {
+            background-color: rgba(27, 108, 168, 0.8);
+            border: none;
+            color: #fff;
+            padding: 15px;
+            cursor: pointer;
+            border-radius: 50%;
+            font-size: 1.5em;
+        }
+
+        .carousel-navigation button:hover {
+            background-color: rgba(27, 108, 168, 1);
+        }
+
+        .timeline-details ul.change {
+            list-style-type: none;
+            padding-left: 0;
+        }
+
+        .timeline-details ul.change li {
+            cursor: pointer;
+            padding: 10px;
+            margin: 5px 0;
+            background-color: rgba(255, 255, 255, 0.1); /* Background for the list items */
+            border-radius: 5px;
+            transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition */
+        }
+
+        .timeline-details ul.change li:hover {
+            background-color: #1b6ca8; /* Changes background to blue on hover */
+            color: #fff; /* Changes text color to white on hover */
+        }       
+
+    </style>
+</head>
+<body>
+
+    <h1>Timeline of the May 2024 Solar Events</h1>
+
+    <!-- Carousel Container -->
+    <div class="carousel-container">
+        
+        <div class="carousel">
+            <!-- Slide 1: May 2  -->
+            
+            <div class="slide">
+                <h3>May 2: X1.6-Class Solar Flare Event</h3>
+                <div class="slide-content">
+                    <video autoplay loop src="videos/May2.mp4" id="media-may2"></video>
+                    <p>On May 2, 2024, an X1.6-class solar flare erupted from the upper central region of the Sun, <br> creating one of the brightest solar events of the year. NASA’s Solar Dynamics Observatory (SDO) <br> captured stunning images of this flare in 131 and 171 Angstrom wavelengths, <br> showcasing the event in extreme ultraviolet light.</p>
+                </div>
+                <div class="timeline-details">
+                    <h4>Flare Classification:</h4>
+                    <ul class="change">
+                        <li onclick="changeMedia('media-may2', 'image', 'images/May2-1.jpg') ">X1.6 solar flare</li>
+                    </ul>
+                    <h4>Impact on Earth:</h4>
+                    <ul>
+                        <li>Minor geomagnetic storm.</li>
+                        <li>Potential auroras visible in northern latitudes. </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Slide 2: May 5 & 6 Solar Flares -->
+            <div class="slide">
+                <h3>May 5 & 6: Series of Strong Solar Flares</h3>
+                <div class="slide-content">
+                    <video autoplay loop src="videos/May5&6.mp4" id="media-may5-6"></video>
+                    <p>
+                        On May 5 and 6, 2024, the Sun emitted a sequence of three powerful solar flares, culminating in an<br> X4.5-class flare.<br> These flares were captured by NASA’s Solar Dynamics Observatory, which observes the Sun <br> continuously, recording these events in extreme ultraviolet wavelengths.
+                    </p>
+                </div>
+                <div class="timeline-details">
+                    <h4>Flare Classification:</h4>
+                    <ul class="change">
+                        <!-- <li onclick="changeMedia('media-may5-6', 'image', 'images/May6-1.jpg')">X4.5-class(Blend of 171 Angstrom and 131 Angstrom light).</li> -->
+                        <!-- <li onclick="changeMedia('media-may5-6', 'image', 'images/May6-2.jpg')">X4.5-class(Blend of 171 Angstrom and 131 Angstrom light).</li> -->
+                        <li onclick="changeMedia('media-may5-6', 'image', 'images/May6-3.jpg')">X4.5-class(131 Angstrom light).</li>
+                        <li onclick="changeMedia('media-may5-6', 'image', 'images/May6-4.jpg')">X4.5-class(171 Angstrom light).</li>
+                    </ul>
+                    <h4>Impact on Earth:</h4>
+                    <ul>
+                        <li>Increased geomagnetic activity.</li>
+                        <li>Possible auroras in high-latitude regions.</li>
+                        <li>Minimal technological disruptions recorded so far.</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <!-- Slide 3: May 7 & 8 Solar Flares -->
+            <div class="slide">
+                <h3>May 7-8: Series of Solar Flares</h3>
+                <div class="slide-content">
+                    <video autoplay loop src="videos/May7.mp4" id="media-may7-8"></video>
+                    <p>
+                        On May 7 and 8, 2024, the Sun unleashed a series of solar flares, with the most powerful flare<br> reaching an X1.0-class.<br> These events were captured by NASA’s Solar Dynamics Observatory, which recorded stunning <br> imagery in 131 and 171 Angstrom light, both subsets of extreme ultraviolet light. This sequence of <br> flares showcased intense solar activity, with visible flashes in the ultraviolet spectrum.
+                    </p>
+                </div>
+                <div class="timeline-details">
+                    <h4>Flare Classification:</h4>
+                    <ul class="change">
+                        <li onclick="changeMedia('media-may7-8', 'image', 'images/May8-3.jpg')">May 7: X3.4-class</li>
+                        <li onclick="changeMedia('media-may7-8', 'image', 'images/May8-4.jpg')">May 8: X1.0-class</li>
+                    </ul>
+                    <h4>Impact on Earth:</h4>
+                    <ul>
+                        <li>Increased geomagnetic activity.</li>
+                        <li>Auroras potentially visible in high-latitude regions.</li>
+                        <li>Minimal technological disruptions reported so far.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Slide 4: May 9 Solar Flare -->
+            <div class="slide">
+                <h3>May 9: X2.2 Solar Flare</h3>
+                <div class="slide-content">
+                    <img src="images/May9.jpg" alt="Solar Flare May 9, 2024" id="media-may9">
+                    <p>
+                        On May 9, 2024, the Sun emitted an X2.2-class solar flare, captured by NASA’s Solar Dynamics<br> Observatory.<br> The imagery highlights 131 Angstrom light colorized in red, showing the bright flash of this powerful<br> flare in the lower center of the image.
+                    </p>
+                </div>
+                <div class="timeline-details">
+                    <h4>Flare Classification:</h4>
+                    <ul class="change">
+                        <li onclick="changeMedia('media-may9', 'image', 'images/May9.jpg')">X2.2-class Solar Flare Image</li>
+                    </ul>
+                    <h4>Impact on Earth:</h4>
+                    <ul>
+                        <li>Increased geomagnetic disturbances.</li>
+                        <li>Auroras possible at high latitudes.</li>
+                        <li>Minimal reported technological interference.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Slide 5: May 10 & 11 Solar Flares -->
+            <div class="slide">
+                <h3>May 10 & 11: Series of Solar Flares</h3>
+                <div class="slide-content">
+                    <img src="images/May10&11-1.jpg" alt="Solar Flare May 10 and 11, 2024" id="media-may10-11">
+                    <p>
+                        On May 10 and 11, 2024, the Sun emitted two powerful solar flares. The X5.8-class flare on May 10 <br> and the X1.5-class flare on May 11 were captured by NASA’s Solar Dynamics Observatory, showing <br> the Sun's activity in extreme ultraviolet light.
+                    </p>
+                </div>
+                <div class="timeline-details">
+                    <h4>Flare Classification:</h4>
+                    <ul class="change">
+                        <li onclick="changeMedia('media-may10-11', 'image', 'images/May10-3.jpg')">May 10, X3.9 flare (early): Blend of 171 and 131 Angstrom EUV light.</li>
+                        <li onclick="changeMedia('media-may10-11', 'image', 'images/May10-4.jpg')">May 10, X5.8 flare: Blend of AIA 193, 171, and 131 Angstrom light.</li>
+                        <li onclick="changeMedia('media-may10-11', 'image', 'images/May11.jpg')">May 11: X3.1-class Solar Flare Image</li>
+                    </ul>
+                    <h4>Impact on Earth:</h4>
+                    <ul>
+                        <li>Increased geomagnetic disturbances.</li>
+                        <li>Auroras possible in high-latitude regions.</li>
+                        <li>Minimal technological disruptions reported so far.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Slide 6: May 13&14 -->
+            <div class="slide">
+                <h3>May 13 & 14: Notable Solar Flares</h3>
+                <div class="slide-content">
+                    <img src="images/May13&14-1.jpg" alt="Solar Flare May 13 and 14, 2024" id="media-may13-14">
+                    <p>
+                        On May 13 and 14, 2024, the Sun produced two significant solar flares classified as X1.7 and X1.2, <br> respectively.<br> These events were captured by NASA’s Solar Dynamics Observatory, showcasing intense solar <br> activity in extreme ultraviolet light.
+                    </p>
+                </div>
+                <div class="timeline-details">
+                    <h4>Flare Classification:</h4>
+                    <ul class="change">
+                        <li onclick="changeMedia('media-may13-14', 'video', 'videos/May13.mp4')">May 13, X1.7 flare: Mixture of AIA 171 and 131 Angstrom light (peak at 10:09 PM EDT).</li>
+                        <li onclick="changeMedia('media-may13-14', 'image', 'images/May14.jpg')">May 14, X1.2 flare: Blend of AIA 171 and 131 Angstrom light (peak at 8:55 AM EDT).</li>
+                    </ul>
+                    <h4>Impact on Earth:</h4>
+                    <ul>
+                        <li>Increased geomagnetic activity anticipated.</li>
+                        <li>Potential for auroras in higher latitude regions.</li>
+                        <li>Minimal impact on technology reported.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        
+        <!-- Navigation Buttons -->
+        <div class="carousel-navigation">
+            <button id="prevBtn">&#10094;</button>
+            <button id="nextBtn">&#10095;</button>
+        </div>
+    </div>
+
+    <script>
+        let currentSlide = 0;
+
+        const carousel = document.querySelector('.carousel');
+        const slides = document.querySelectorAll('.slide');
+
+        function showSlide(index) {
+            const offset = -index * 100;
+            carousel.style.transform = `translateX(${offset}%)`;
+        }
+
+        document.getElementById('prevBtn').addEventListener('click', () => {
+            currentSlide = (currentSlide > 0) ? currentSlide - 1 : slides.length - 1;
+            showSlide(currentSlide);
+        });
+
+        document.getElementById('nextBtn').addEventListener('click', () => {
+            currentSlide = (currentSlide < slides.length - 1) ? currentSlide + 1 : 0;
+            showSlide(currentSlide);
+        });
+
+        function changeMedia(mediaId, type, src) {
+            const mediaElement = document.getElementById(mediaId);
+            if (type === 'image') {
+                mediaElement.outerHTML = `<img id="${mediaId}" src="${src}" />`;
+            } else if (type === 'video') {
+                mediaElement.outerHTML = `<video id="${mediaId}" src="${src}" autoplay loop></video>`;
+            }
+        }
+    </script>
+
+</body>
+
+
+
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Impact of May 2024 Solar Storms</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #0a0f1e;
+            color: #fff;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+
+        h1 {
+            text-align: center;
+            margin-top: 20px;
+            color: #529bee;
+            font-size: 3em;
+            
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: auto;
+            padding: 20px;
+        }
+
+        .tabs {
+            display: flex;
+            justify-content: space-around;
+            margin: 30px 0;
+        }
+
+        .tab {
+            background-color: rgba(27, 38, 59, 0.8);
+            border: 2px solid #1b6ca8;
+            border-radius: 25px;
+            padding: 15px 25px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+        }
+
+        .tab:hover {
+            transform: scale(1.1);
+            background-color: #1b6ca8;
+            color: #000;
+        }
+
+        .content {
+            display: none;
+            margin-top: 20px;
+        }
+
+        .content.active {
+            display: block;
+        }
+
+        .case-study {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 20px;
+            border-radius: 15px;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+        }
+
+        .quote {
+            display: none;
+            padding: 20px;
+            margin-bottom: 40px;
+            background-color: rgba(0, 0, 0, 0.8);
+            border-left: 5px solid #1b6ca8;
+            position: relative;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80%;
+            text-align: center;
+            border-radius: 10px;
+            box-shadow: 0 4px 20px rgba(255, 255, 255, 0.5);
+        }
+
+        .diagram {
+            display: flex;
+            justify-content: space-around;
+            margin: 50px 0;
+        }
+
+        .diagram img {
+            width: 35%;
+            border-radius: 15px;
+            box-shadow: 0 4px 20px rgba(255, 255, 255, 0.5);
+        }
+
+        .quote.active {
+            display: block;
+        }
+
+        .quote-trigger {
+            color: #1b6ca8;
+            cursor: pointer;
+            font-style: italic;
+            text-decoration: underline;
+        }
+
+        .quote-trigger:hover {
+            color: #77aed8;
+        }
+
+        /* Hover effect for images */
+        .img-hover-container {
+            position: relative;
+            display: inline-block;
+            overflow: hidden;
+            margin: 20px 0;
+        }
+
+        .img-hover-container img {
+            display: block;
+            transition: transform 0.5s ease, filter 0.5s ease;
+        }
+
+        .img-hover-container:hover img {
+            transform: scale(1.1); /* Zoom in */
+            filter: brightness(50%); /* Darken image */
+        }
+
+        .img-text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: white;
+            font-size: 1.5em;
+            opacity: 0;
+            transition: opacity 0.5s ease;
+            pointer-events: none;
+        }
+
+        .img-hover-container:hover .img-text {
+            opacity: 1; /* Show text on hover */
+        }
+
+    </style>
+</head>
+<body>
+
+    <h1>Impact of the May 2024 Solar Storms on Technology</h1>
+
+    <div class="container">
+        <!-- Tabs for different sectors -->
+        <div class="tabs">
+            <div class="tab" data-tab="1">Power Grids</div>
+            <div class="tab" data-tab="2">Satellites</div>
+            <div class="tab" data-tab="3">Communication</div>
+            <div class="tab" data-tab="4">International Space Station (ISS)</div>
+        </div>
+
+        <!-- Content for each sector -->
+        <div id="content-1" class="content">
+            <div class="case-study">
+                <h2>Power Grids</h2>
+                <p>During the May 2024 solar storms, several regions experienced power grid fluctuations and blackouts. The geomagnetic storm induced electrical currents in power lines, which led to transformer damage in areas like Canada and northern Europe.</p>
+                <div class="img-hover-container">
+                    <img src="images/power grids.webp" alt="Impact on Power Grids" style="width: 700px;">
+                    <div class="img-text">"Solar storms like the one in May 2024 push the boundaries of our current understanding of space weather. It's crucial to adapt our power grid infrastructure to such events." - Dr. Teresa Nieves-Chinchilla</div>
+                </div>
+            </div>
+        </div>
+
+        <div id="content-2" class="content">
+            <div class="case-study">
+                <h2>Satellites</h2>
+                <p>Satellites experienced higher drag, and some had to be repositioned. Notably, NASA's ICESat-2 entered safe mode to avoid solar storm damage.</p>
+                <div class="img-hover-container">
+                    <img src="images/satellite.jpg" alt="Satellite Impact" style="width: 700px;">
+                    <div class="img-text">"Satellite operations were directly impacted by the solar storms. We observed significant anomalies and took preemptive measures to prevent more serious consequences." - NASA Heliophysics Division</div>
+                </div>
+            </div>
+        </div>
+
+        <div id="content-3" class="content">
+            <div class="case-study">
+                <h2>Communication Systems</h2>
+                <p>Aviation and military communication systems experienced brief outages, particularly in the polar regions. Radio signal blackouts affected flights on transpolar routes, delaying air traffic and rerouting some planes.</p>
+                <div class="img-hover-container">
+                    <img src="images/space_weather_empact_Communication_Systems.webp" alt="Impact on Communication Systems" style="height: 500px; width: 500px;">
+                    <div class="img-text">"Communication interruptions are common during geomagnetic storms, especially in the high-latitude regions. Our team worked around the clock to forecast and mitigate their impact." - NOAA’s Space Weather Prediction Center</div>
+                </div>
+            </div>
+        </div>
+
+        <div id="content-4" class="content">
+            <div class="case-study">
+                <h2>Astronauts on the ISS</h2>
+                <p>Astronauts aboard the ISS took precautions during the event, such as moving to shielded areas. Instruments on the ISS also recorded increased radiation levels.</p>
+                <div class="img-hover-container">
+                    <img src="images/International Space Station (ISS).jpg" alt="Impact on ISS" style="width: 700px;">
+                    <div class="img-text">"We followed the space weather forecast closely and implemented radiation shielding protocols during the peak of the storm. Safety is always our top priority." - NASA Astronaut</div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+        <!-- Diagrams -->
+        <div class="diagram">
+            <!-- <img src="img/impacts-diagram.png" alt="Solar Storm Interacting with Earth's Magnetic Field"> -->
+            <img src="images/space weather impact.jpg" alt="Solar Storm Interacting with Earth's Magnetic Field">
+            <img src="images/Space_weather_effects_pillars.jpg" alt="Satellite Affected by Space Weather">
+        </div>
+
+    <script>
+        // Tab switching functionality
+        const tabs = document.querySelectorAll('.tab');
+        const contents = document.querySelectorAll('.content');
+
+        tabs.forEach((tab, index) => {
+            tab.addEventListener('click', () => {
+                contents.forEach(content => content.classList.remove('active'));
+                document.getElementById('content-' + (index + 1)).classList.add('active');
+            });
+        });
+
+        // Quote trigger functionality
+        const quoteTriggers = document.querySelectorAll('.quote-trigger');
+        const quotes = document.querySelectorAll('.quote');
+
+        quoteTriggers.forEach(trigger => {
+            trigger.addEventListener('click', () => {
+                const quoteId = trigger.getAttribute('data-quote');
+                quotes.forEach(quote => quote.classList.remove('active'));
+                document.getElementById('quote-' + quoteId).classList.add('active');
+            });
+        });
+    </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solar Storm Comparison & Timeline</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #0d1b2a;
+            color: #ffffff;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+
+        h1 {
+            color: #529bee;
+            
+        }
+
+        /* Table Styles */
+        table {
+            width: 80%;
+            border-collapse: collapse;
+            background-color: #1b263b;
+            margin: 20px 0;
+            color: #fff;
+        }
+
+        th, td {
+            padding: 15px;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            text-align: center;
+        }
+
+        th {
+            background-color: #1b6ca8;
+            color: #fff;
+            text-shadow: 1px 1px 5px #000;
+        }
+
+        tr:nth-child(even) {
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+
+        tr:hover {
+            background-color: #1b6ca8;
+            color: #fff;
+        }
+
+        caption {
+            caption-side: top;
+            font-size: 1.5em;
+            margin: 10px 0;
+            color: #1b6ca8;
+        }
+
+        /* Chart container */
+        .chart-container {
+            width: 60%;
+            margin: 30px auto;
+        }
+
+        /* Image gallery */
+        .img-gallery {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 30px;
+        }
+
+        .img-gallery figure {
+            width: 300px;
+            margin: 10px;
+            text-align: center;
+        }
+
+        .img-gallery img {
+            width: 100%;
+            height: 200px;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+            object-fit: cover;
+        }
+
+        .img-gallery figcaption {
+            margin-top: 10px;
+            font-size: 1.1em;
+            color: #1b6ca8;
+            text-shadow: 1px 1px 5px #000;
+        }
+
+        /* Chart.js style */
+        canvas {
+            background-color: rgba(255, 255, 255, 0.1);
+            padding: 0px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+        }
+
+        .Comparison_Table {
+            max-width: 80%;
+            text-align: center;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+    </style>
+</head>
+<body>
+
+    <h1>Comparison of Major Historical Solar Storms</h1>
+
+    <!-- Comparison Table -->
+    <table class="Comparison_Table">
+        <thead>
+            <tr>
+                <th>Event</th>
+                <th>Date</th>
+                <th>Intensity (Dst Index)</th>
+                <th>Impact</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>May 2024 Storm</td>
+                <td>May, 2024</td>
+                <td>-412 nT</td>
+                <td>Minor satellite disruptions, auroras at lower latitudes, minor GPS issues</td>
+            </tr>
+            <tr>
+                <td>2003 Halloween Storms</td>
+                <td>October, 2003</td>
+                <td>-383 nT</td>
+                <td>Satellite failures, power outages in Sweden, auroras in Texas and Canada</td>
+            </tr>
+            <tr>
+                <td>Carrington Event</td>
+                <td>September, 1859</td>
+                <td>-850 nT</td>
+                <td>Telegraph systems failed globally, auroras visible as far south as the Caribbean, some telegraph pylons caught fire</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <!-- Chart.js for Intensity Comparison -->
+    <div class="chart-container">
+        <canvas id="dstChart"></canvas>
+    </div>
+
+    <!-- Image Gallery -->
+    <div class="img-gallery">
+        <figure>
+            <img src="images/aurora_may_10.jpg" alt="Auroras from May 2024">
+            <figcaption>Auroras from May 2024</figcaption>
+        </figure>
+        <figure>
+            <img src="images/hakkoween storms.png" alt="Satellite data from 2003 storm">
+            <figcaption>2003 Halloween Storms</figcaption>
+        </figure>
+        <figure>
+            <img src="images/carrington event.jpg" alt="Illustration of the Carrington Event">
+            <figcaption>Carrington Event (1859)</figcaption>
+        </figure>
+    </div>
+
+    <h1>Timeline of Most Known Solar Storms</h1>
+
+    <!-- Chart.js for Solar Storm Timeline -->
+    <div class="chart-container">
+        <canvas id="intensityTimelineChart"></canvas>
+    </div>
+
+
+    <!-- Chart.js Script for Dst Index Comparison -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+        const ctx1 = document.getElementById('dstChart').getContext('2d');
+        const dstChart = new Chart(ctx1, {
+            type: 'bar',
+            data: {
+                labels: ['May 2024', '2003 Halloween Storms', 'Carrington Event'],
+                datasets: [{
+                    label: 'Dst Index (nT)',
+                    data: [-412, -383, -850],
+                    backgroundColor: 'rgba(75, 192, 192, 0.2)',
+                    borderColor: 'rgba(75, 192, 192, 1)',
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        title: {
+                            display: true,
+                            text: 'Dst Index (nT)'
+                        }
+                    }
+                },
+                plugins: {
+                    title: {
+                        display: true,
+                        text: 'Comparison of Solar Storm Intensity (Dst Index)'
+                    }
+                }
+            }
+        });
+
+        const ctx2 = document.getElementById('intensityTimelineChart').getContext('2d');
+        const intensityTimelineChart = new Chart(ctx2, {
+            type: 'line',
+            data: {
+                labels: ['1582', '1770', '1859', '1872', '1903', '1921', '1989', '2003', '2024'],
+                datasets: [{
+                    label: 'Dst Index (nT)',
+                    data: [null, null, -850, -834, -531, -907, -589, -383, -412],
+                    backgroundColor: 'rgba(75, 192, 192, 0.2)',
+                    borderColor: 'rgba(75, 192, 192, 1)',
+                    borderWidth: 2,
+                    fill: false,
+                    tension: 0.1,
+                }]
+            },
+            options: {
+                scales: {
+                    y: {
+                        beginAtZero: false,
+                        title: {
+                            display: true,
+                            text: 'Dst Index (nT)'
+                        },
+                        ticks: {
+                            callback: function(value) {
+                                return value + ' nT';
+                            }
+                        }
+                    },
+                    x: {
+                        title: {
+                            display: true,
+                            text: 'Year'
+                        }
+                    }
+                },
+                plugins: {
+                    title: {
+                        display: true,
+                        text: 'Intensity Timeline of Historical Solar Events (Dst Index)'
+                    }
+                }
+            }
+        });
+    </script>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Preparing for Future Solar Storms</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+             
+            color: #ffffff; /* Text color */
+            margin: 0;
+            padding: 0;
+            text-align: center; /* Center text alignment */
+        }
+        h1 {
+            color: #529bee; /* Heading color */
+       
+            margin-top: 20px; /* Top margin */
+        }
+        h2 {
+            color: #1b6ca8; /* Subheading color */
+            margin-top: 50px; /* Top margin */
+            text-shadow: 2px 2px 10px #1b6ca8; /* Text shadow */
+        }
+        h4 {
+            color: #1b6ca8; /* H4 color */
+            margin-top: 20px; /* Top margin */
+        }
+        p {
+            color: #a9a9a9; /* Paragraph color */
+            line-height: 1.6; /* Line height for readability */
+            margin: 10px 0; /* Margin for spacing */
+        }
+        .container {
+            max-width: 1200px;
+            margin: auto;
+            padding: 20px;
+        }
+        .infographic {
+            width: 100%;
+            height: 500px;
+            border-radius: 15px;
+            box-shadow: 0 4px 20px rgba(255, 255, 255, 0.5);
+            margin: 20px 0;
+            background-color: rgba(255, 255, 255, 0.1); /* Infographic background */
+            display: flex;
+            align-items: center; /* Center items vertically */
+            justify-content: center; /* Center items horizontally */
+        }
+        .mission-quotes {
+            background: rgba(255, 255, 255, 0.1); /* Mission quotes background */
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px 0;
+            box-shadow: 0 4px 20px rgba(255, 255, 255, 0.5);
+        }
+        .visuals {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+        .visuals figure {
+            width: 300px;
+            margin: 10px;
+            text-align: center;
+        }
+        .visuals img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(27, 108, 168, 0.4); /* Shadow color */
+        }
+
+        /* Table Styles */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background-color: #1b263b; /* Table background color */
+            margin: 20px 0; /* Margin for spacing */
+            color: #fff; /* Text color in table */
+        }
+
+        th, td {
+            padding: 15px; /* Cell padding */
+            border: 1px solid rgba(255, 255, 255, 0.3); /* Cell border */
+            text-align: center; /* Center align text */
+        }
+
+        th {
+            background-color: #1b6ca8; /* Header background color */
+            color: #fff; /* Header text color */
+            text-shadow: 1px 1px 5px #000; /* Header text shadow */
+        }
+
+        tr:nth-child(even) {
+            background-color: rgba(255, 255, 255, 0.1); /* Even row background */
+        }
+
+        tr:hover {
+            background-color: #1b6ca8; /* Hover background color */
+            color: #fff; /* Hover text color */
+        }
+
+        /* Image Styles */
+        .mission-image {
+            width: 350px; /* Adjusted width for larger images */
+            height: auto; /* Maintain aspect ratio */
+            border-radius: 8px; /* Rounded corners */
+        }
+    </style>
+</head>
+<body>
+    <canvas id="auroraCanvas"></canvas>
+
+    <h1>Preparing for Future Solar Storms</h1>
+    <div class="container">
+        <h2>Looking to the Future</h2>
+        <p>In the wake of the May 2024 solar storm, scientists are leveraging valuable data to enhance space weather forecasting. This storm highlighted the need for improved predictive capabilities, especially as solar activity becomes more variable and intense. By analyzing data from this event, researchers are refining models that predict the impact of solar storms on Earth, particularly on satellite operations, communications, and power grids.</p>
+
+        <h3>Upcoming Missions</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>Mission</th>
+                    <th>Objective</th>
+                    <th>Importance</th>
+                    <th>Image</th> <!-- New column for images -->
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>NASA's Geospace Dynamics Constellation (GDC)</td>
+                    <td>To understand the dynamics of the Earth's upper atmosphere and the interaction between solar winds and the magnetosphere.</td>
+                    <td>GDC will provide multipoint observations crucial for unraveling the processes that drive the ionosphere-thermosphere system, impacting communication and satellite operations.</td>
+                    <td><figure><img src="images/GDCr.jpg" alt="Illustration of GDC Mission" class="mission-image"></figure></td> <!-- Image for GDC -->
+                </tr>
+                <tr>
+                    <td>NASA DYNAMIC Mission</td>
+                    <td>To investigate the behavior and structure of the ionosphere, thermosphere, and mesosphere system using two satellites.</td>
+                    <td>DYNAMIC is prioritized for its potential to enhance understanding of the upper atmosphere's response to solar activity, critical for space weather forecasting.</td>
+                    <td><figure><img src="images/DYNAMIC.png" alt="Illustration of DYNAMIC Mission" class="mission-image"></figure></td> <!-- Image for DYNAMIC -->
+                </tr>
+            </tbody>
+        </table>
+
+        <!-- <div class="infographic">
+            <p>Infographic on upcoming missions (embed or link to infographic).</p>
+        </div> -->
+
+        <h2>Quotes from NASA Experts</h2>
+        <div class="mission-quotes">
+            <p>"The data from the May 2024 storm will significantly enhance our forecasting models, enabling us to better predict solar storms and their potential impacts." - Dr. John Doe, NASA Solar Physicist</p>
+            <p>"With GDC and DYNAMIC, we hope to unlock new insights into the behavior of solar winds and their effects on our planet." - Dr. Jane Smith, Geospace Dynamics Lead</p>
+        </div>
+
+    </div>
+    <div id="footer">
+         
+        <div class="footnote">
+            <div>
+                <p>&copy; 2024 BY Solar Symphony | ALL RIGHTS RESERVED</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="JS/background.js"></script>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
