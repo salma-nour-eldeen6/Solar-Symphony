@@ -170,27 +170,29 @@
 		</section>
 	  
 		<script>
-		  function updateImage() {
-			// Get current date
-			const today = new Date();
-			const year = today.getFullYear(); // Full year (e.g., 2024)
-			const day = String(today.getDate()).padStart(2, '0'); // Day padded to 2 digits (e.g., 12)
-			const month = today.toLocaleString('en-US', { month: 'short' }).toLowerCase(); // Month name in short form (e.g., jun)
-			const shortYear = year.toString().slice(-2); // Last two digits of the year (e.g., 24)
-	  
-			// Format the URL (day+month+last 2 digits of year)
-			const imageUrl = `https://spaceweather.com/images${year}/${day}${month}${shortYear}/hmi1898.gif`;
-	  
-			// Update image source
-			document.getElementById('spaceImage').src = imageUrl;
-		  }
-	  
-		  // Update image on page load
-		  updateImage();
-	  
-		  // Optional: Refresh image every 24 hours
-		  setInterval(updateImage, 24 * 60 * 60 * 1000);
-		</script>
+			function updateImage() {
+			  // Get current date and set it to yesterday
+			  const today = new Date();
+			  today.setDate(today.getDate() - 1); // Subtract one day
+		  
+			  const year = today.getFullYear(); // Full year (e.g., 2024)
+			  const day = String(today.getDate()).padStart(2, '0'); // Day padded to 2 digits (e.g., 12)
+			  const month = today.toLocaleString('en-US', { month: 'short' }).toLowerCase(); // Month name in short form (e.g., jun)
+			  const shortYear = year.toString().slice(-2); // Last two digits of the year (e.g., 24)
+		  
+			  // Format the URL (day+month+last 2 digits of year)
+			  const imageUrl = `https://spaceweather.com/images${year}/${day}${month}${shortYear}/hmi1898.gif`;
+		  
+			  // Update image source
+			  document.getElementById('spaceImage').src = imageUrl;
+			}
+		  
+			// Update image on page load
+			updateImage();
+		  
+			// Optional: Refresh image every 24 hours
+			setInterval(updateImage, 24 * 60 * 60 * 1000);
+		  </script>
 
 
 		<section id="nasa-orrery">
