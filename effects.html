@@ -5,17 +5,42 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Space Weather Components</title>
     <link rel="stylesheet" href="css/style.css" type="text/css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <style>
+        @media screen and (max-width: 768px) {
+            h1 {
+                font-size: 2rem; /* تقليل حجم العنوان في الشاشات الصغيرة */
+            }
+            .container {
+                padding: 0.5rem;
+            }
+            .video-container {
+                padding-bottom: 56.25%; /* نسبة عرض الفيديو للشاشات الصغيرة */
+            }
+            .nav-arrow {
+                font-size: 1.5rem; /* تقليل حجم الأسهم */
+                padding: 0.5rem;
+            }
+            body {
+                line-height: 1.4; /* تخفيض مسافات الأسطر لتتناسب مع الشاشات الصغيرة */
+                padding: 0;
+            }
+            .component-card {
+                padding: 1rem; /* تقليل المسافات الداخلية في الكروت */
+            }
+            .card-header {
+                font-size: 1.25rem;
+                padding: 0.75rem;
+            }
+        }
+        
         body {
             font-family: 'Roboto', sans-serif;
-            background-color:#0d213a;
-                        background-image: url('images/17506.jpg');
- 
-background-position: center; /* لمركز الصورة */
- 
- 
-
-
+            background-image: url('space-4169495_1920.jpg');
+            background-size: cover;
+            background-position: center;
+            background-color: #111721;
  
             color: #e0e0e0;
             margin: 0;
@@ -27,12 +52,6 @@ background-position: center; /* لمركز الصورة */
             justify-content: flex-start;
             padding-top: -1px;
         }
-
-        .overlay{
-            background-image: url('images/17506.jpg');
- 
-            background-position: center; /* لمركز الصورة */
-        }
         .container {
             max-width: 800px;
             margin: 0 auto;
@@ -41,7 +60,6 @@ background-position: center; /* لمركز الصورة */
         header {
             text-align: center;
             margin-bottom: 1rem;
- 
         }
         h1 {
             font-size: 3rem;
@@ -211,7 +229,7 @@ background-position: center; /* لمركز الصورة */
     </style>
 </head>
 <body>
-<!--     <canvas id="auroraCanvas"></canvas> -->
+ 
     <div id="header">
         <div>
             <a href="index.html" class="logo">
@@ -224,7 +242,7 @@ background-position: center; /* لمركز الصورة */
                 </li>
  
                 <li class="menu">
-                    <a href="May.html">May 2024</a>
+                    <a href="may.html">May 2024</a>
                     <ul class="primary">
                         <!-- <li>
                             <a href="proj1.html">proj 1</a>
@@ -266,8 +284,10 @@ background-position: center; /* لمركز الصورة */
             <h1>Amazing Effects of Solar Phenomena on Earth</h1>
             <p>Solar phenomena, like solar winds and coronal mass ejections, create stunning effects on our planet, generating mesmerizing auroras and disrupting our technologies!</p>
         </div>
- 
-        
+        <video autoplay muted loop class="background-video">
+            <source src="https://svs.gsfc.nasa.gov/vis/a000000/a005200/a005214/multiField_11-30-2023a_magnetosphere_anim_dome4k_2048p30_sunFix.mp4" type="video/mp4"> <!-- ضع رابط الفيديو هنا -->
+            Your browser does not support the video tag.
+        </video>
     </div>
 
 
@@ -414,7 +434,5 @@ function hideHoverMedia() {
         // Initial render
         renderComponent(currentIndex);
     </script>
-
-<!--     <script src="JS/background.js"></script> -->
 </body>
 </html>
