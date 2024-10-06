@@ -11,17 +11,15 @@
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-background-image: url('https://wallpaperaccess.com/full/17499.jpg');
-background-color: #0d1b2a; /* اللون الاحتياطي في حالة عدم تحميل الصورة */
-background-size: cover;
-background-position: center;
-
+            background-image: url('https://cdn.pixabay.com/photo/2022/10/04/21/25/xr-7499160_960_720.jpg');
+            background-color: #0d1b2a; /* اللون الاحتياطي في حالة عدم تحميل الصورة */
+            
+            background-position: center;
             color: white;
             min-height: 100vh;
             display: flex;
             flex-direction: column;
             justify-content: space-between; /* To keep footer at the bottom */
-                        background-color: #11436a;
         }
 
         /* Styling for the header (navbar) */
@@ -39,18 +37,19 @@ background-position: center;
         .content-container {
             position: relative;
             display: flex;
-            justify-content: center;
-            align-items: flex-start;
+            flex-direction: column; /* Changed to column for mobile */
+            align-items: center; /* Center items */
             gap: 30px;
             padding: 100px 20px; /* Add padding-top to accommodate the fixed navbar */
-            background-color: rgba(46, 45, 45, 0.5); /* نصف شفاف، يمكنك تغيير القيمة بين 0 و 1 */
+            background-color: rgba(46, 45, 45, 0.5); /* نصف شفاف */
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             border-radius: 8px;
             max-width: 1000px;
             margin: 130px auto;
             color: #fff;
             min-height: 150vh; /* Ensure enough space for content */
-            width: 800px;
+            width: 100%; /* Make it responsive */
+            box-sizing: border-box; /* Include padding in width calculation */
         }
 
         /* QR steps container */
@@ -61,7 +60,7 @@ background-position: center;
         }
 
         .qr-steps-container img {
-            max-width: 250px;
+            max-width: 80%; /* Make it responsive */
             margin-bottom: 20px;
             border-radius: 8px;
             box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3); /* Add shadow to images */
@@ -82,46 +81,46 @@ background-position: center;
         /* Image corners */
         .corner-image {
             position: absolute;
-            width: 100px;
-            height: 100px;
+            width: 20%; /* Responsive size */
+            height: auto; /* Maintain aspect ratio */
             border-radius: 50%;
         }
 
         .top-left {
-            top: -50px;
-            left: -50px;
-            width: 150px;
-            height: 140px;
+            top: -10px;
+            left: -10px;
+            width: 30%; /* Adjusted for mobile */
+            height: auto;
         }
 
         .top-right {
-            top: -40px;
-            right: -40px;
-            width: 116px;
-            height: 110px;
+            top: -10px;
+            right: -10px;
+            width: 25%; /* Adjusted for mobile */
+            height: auto;
         }
 
         .bottom-left {
-            bottom: -60px;
-            left: -70px;
-            width: 200px;
-            height: 200px;
+            bottom: -10px;
+            left: -10px;
+            width: 35%; /* Adjusted for mobile */
+            height: auto;
         }
 
         .bottom-right {
-            bottom: -50px;
-            right: -50px;
-            width: 200px;
-            height: 200px;
+            bottom: -10px;
+            right: -10px;
+            width: 25%; /* Adjusted for mobile */
+            height: auto;
         }
 
         .image-container {
             display: block;
-            position: absolute;
+            position: relative; /* Change to relative for mobile */
             bottom: 0;
             left: 50%;
             transform: translateX(-50%);
-            width: 700px;
+            width: 100%; /* Make it responsive */
             z-index: 1;
             margin-bottom: -50%;
         }
@@ -131,23 +130,41 @@ background-position: center;
             height: auto;
             margin-bottom: 468px;
         }
+
+        /* Media Queries for Responsiveness */
+        @media (max-width: 600px) {
+            .content-container {
+                padding: 60px 10px; /* Adjust padding for smaller screens */
+                margin: 90px auto; /* Adjust margin for smaller screens */
+            }
+
+            h2 {
+                font-size: 24px; /* Smaller heading on mobile */
+            }
+
+            .info-text {
+                font-size: 16px; /* Smaller text on mobile */
+            }
+
+            .corner-image {
+                width: 20%; /* Adjust size for corner images on mobile */
+            }
+        }
     </style>
 </head>
 <body>
- 
-    
+
     <!-- Navigation Bar -->
     <div id="header">
         <div>
             <a href="index.html" class="logo">
                 <img src="images/final2.png" alt="Logo">
             </a>
-            
+
             <ul id="navigation">
                 <li class="selected">
                     <a href="index.html">Home</a>
                 </li>
- 
                 <li class="menu">
                     <a href="May.html">May 2024</a>
                 </li>
@@ -181,8 +198,6 @@ background-position: center;
             <img src="images/qr.png" alt="Step 1: Scan the QR code to view the AR experience">
             <img src="images/qr1.png" alt="Step 2: Image demonstrating how to scan QR code">
             <img src="images/qr2.png" alt="Step 3: Image demonstrating how to view AR on the mobile device" margin-botton="150px">
-
-            
         </div>
         
         <!-- Solar Storm Image -->
@@ -194,9 +209,7 @@ background-position: center;
         <img src="images/dazzle-space-exploration-with-vr-headset.png" class="corner-image top-left" alt="Top Left Corner Image">
         <img src="images/icons8-sci-fi-100.png" class="corner-image top-right" alt="Top Right Corner Image">
         <img src="images/tutti-rocket-flying-in-space-1.png" class="corner-image bottom-left" alt="Bottom Left Corner Image">
-        <!-- <img src="images/icons8-space-fighter-96.png " class="corner-image bottom-right" alt="Bottom Right Corner Image"> -->
     </div>
 
-  
 </body>
 </html>
