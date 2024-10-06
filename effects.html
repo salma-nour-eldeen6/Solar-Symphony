@@ -8,9 +8,12 @@
     <style>
         body {
             font-family: 'Roboto', sans-serif;
-            background-image: url('images/17506.jpg');
-            background-size: cover; 
-            background-position: center;
+            background-color:#0d213a;
+ 
+ 
+
+
+ 
             color: #e0e0e0;
             margin: 0;
             padding: 0;
@@ -21,30 +24,23 @@
             justify-content: flex-start;
             padding-top: -1px;
         }
-
         .container {
-            max-width: 100%;
+            max-width: 800px;
             margin: 0 auto;
             padding: 1rem;
         }
-
         header {
             text-align: center;
             margin-bottom: 1rem;
+            background-image: url('images/17506.jpg');
+background-size: cover; /* لتغطية الخلفية بالكامل */
+background-position: center; /* لمركز الصورة */
         }
-
         h1 {
-            font-size: 2.5rem;
+            font-size: 3rem;
             color: #529bee;
             margin-bottom: 0.5rem;
         }
-
-        @media (max-width: 768px) {
-            h1 {
-                font-size: 2rem;
-            }
-        }
-
         .carousel {
             position: relative;
             overflow: hidden;
@@ -52,11 +48,9 @@
             border-radius: 10px;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         }
-
         .component-card {
             padding: 2rem;
         }
-
         .card-header {
             background-color: #529bee;
             color: #0a0e17;
@@ -65,7 +59,6 @@
             text-align: center;
             margin: -2rem -2rem 1rem -2rem;
         }
-
         .video-container {
             position: relative;
             padding-bottom: 40%;
@@ -74,7 +67,6 @@
             margin-bottom: 1rem;
             max-width: 100%;
         }
-
         .video-container video, .video-container img {
             position: absolute;
             top: 0;
@@ -83,7 +75,6 @@
             height: 100%;
             border: none;
         }
-
         .hover-media {
             position: absolute;
             top: 0;
@@ -93,22 +84,18 @@
             display: none;
             object-fit: cover;
         }
-
         .data-list {
             list-style-type: none;
             padding: 0;
         }
-
         .data-list li {
             margin-bottom: 0.5rem;
         }
-
         .data-label {
             font-weight: bold;
             color: #f39c12;
             cursor: pointer;
         }
-
         .nav-arrow {
             position: absolute;
             top: 50%;
@@ -121,28 +108,18 @@
             cursor: pointer;
             transition: background-color 0.3s ease;
         }
-
         .nav-arrow:hover {
             background-color: #4a90e2;
         }
-
         .nav-arrow.prev {
             left: 0;
             border-top-right-radius: 5px;
             border-bottom-right-radius: 5px;
         }
-
         .nav-arrow.next {
             right: 0;
             border-top-left-radius: 5px;
             border-bottom-left-radius: 5px;
-        }
-
-        @media (max-width: 768px) {
-            .nav-arrow {
-                font-size: 1.5rem;
-                padding: 0.5rem;
-            }
         }
 
         .video-container.solar-flares {
@@ -165,14 +142,25 @@
             transform: scale(1);
         }
 
+
+        
+        
+ 
+
+
+
+
+
+
+
         #about-section {
             position: relative; 
             height: 80vh;  
             width: 100%;
-            display: flex;
+            display: flex; /* تمكين تنسيق العناصر داخل القسم */
             justify-content: center; 
             align-items: center;
-            overflow: hidden;
+            overflow: hidden; /* إخفاء أي جزء من الفيديو يتجاوز الحدود */
         }
         
         #about-section .overlay {
@@ -181,35 +169,27 @@
             left: 0;
             right: 0;
             bottom: 0;
-            z-index: 1;
+             
+            z-index: 1; /* خلف المحتوى */
         }
         
         #about-section .content_TEXT {
             position: relative;
-            z-index: 2;
-            color: white;
-            text-align: center;
-            max-width: 800px;
-            padding: 20px;
+            z-index: 2; /* فوق الطبقة الشفافة */
+            color: white; /* لون النص */
+            text-align: center; /* محاذاة النص إلى المنتصف */
+            max-width: 800px; /* تحديد عرض النص */
+            padding: 20px; 
         }
         
         #about-section h1 {
-            font-size: 3rem;
-            margin-bottom: 1rem;
-        }
-
-        @media (max-width: 768px) {
-            #about-section h1 {
-                font-size: 2rem;
-            }
-            #about-section p {
-                font-size: 1.2rem;
-            }
+            font-size: 3rem; /* حجم عنوان النص */
+            margin-bottom: 1rem; /* مساحة تحت العنوان */
         }
         
         #about-section p {
-            font-size: 1.5rem;
-            margin: 0 auto;
+            font-size: 1.5rem; /* حجم نص الفقرة */
+            margin: 0 auto; /* محاذاة الفقرة */
         }
         
         .background-video {
@@ -218,39 +198,40 @@
             left: 0;
             width: 100%;
             height: 100%;
-            object-fit: cover;
-            z-index: 0;
-        }
-
-        #footer {
-            text-align: center;
-            padding: 1rem 0;
-            background-color: #1a2332;
-            color: #fff;
-            font-size: 1rem;
-        }
-
-        @media (max-width: 768px) {
-            #footer {
-                font-size: 0.8rem;
-            }
+            object-fit: cover; /* يجعل الفيديو يغطي الخلفية بالكامل */
+            z-index: 0; /* خلف الطبقة الشفافة والنص */
         }
     </style>
 </head>
 <body>
+<!--     <canvas id="auroraCanvas"></canvas> -->
     <div id="header">
         <div>
             <a href="index.html" class="logo">
-                <img src="images/final2.png" alt="Logo" width="150" height="150">
+                <img src="images/final2.png" alt="" width="150" height="150">
             </a>
+            
             <ul id="navigation">
                 <li class="selected">
                     <a href="index.html">Home</a>
                 </li>
+ 
                 <li class="menu">
                     <a href="May.html">May 2024</a>
-                    <ul class="primary"></ul>
+                    <ul class="primary">
+                        <!-- <li>
+                            <a href="proj1.html">proj 1</a>
+                        </li> -->
+                    </ul>
                 </li>
+                <!-- <li class="menu">
+                    <a href="blog.html">Blog</a>
+                    <ul class="secondary">
+                        <li>
+                            <a href="singlepost.html">Single post</a>
+                        </li>
+                    </ul>
+                </li> -->
                 <li>
                     <a href="effects.html">Effects</a>
                 </li>
@@ -266,9 +247,11 @@
                 <li>
                     <a href="Resources.html">Resources</a>
                 </li>
+ 
             </ul>
         </div>
     </div>
+ 
 
     <div id="about-section">
         <div class="overlay"></div>
@@ -276,7 +259,11 @@
             <h1>Amazing Effects of Solar Phenomena on Earth</h1>
             <p>Solar phenomena, like solar winds and coronal mass ejections, create stunning effects on our planet, generating mesmerizing auroras and disrupting our technologies!</p>
         </div>
+ 
+        
     </div>
+
+
 
     <div class="container">
         <header>
@@ -286,13 +273,16 @@
         <div class="carousel">
             <button class="nav-arrow prev" onclick="changeComponent(-1)">&#10094;</button>
             <button class="nav-arrow next" onclick="changeComponent(1)">&#10095;</button>
+
             <div id="componentContainer"></div>
         </div>
     </div>
-
     <div id="footer">
+         
         <div class="footnote">
-            <p>&copy; 2024 BY Solar Symphony | ALL RIGHTS RESERVED</p>
+            <div>
+                <p>&copy; 2024 BY Solar Symphony | ALL RIGHTS RESERVED</p>
+            </div>
         </div>
     </div>
 
@@ -304,44 +294,120 @@
                 data: [
                     { label: "Geomagnetic Storms", value: "Solar wind interacts with Earth's magnetic field, compressing it and triggering geomagnetic storms.", hoverMedia: "https://scied.ucar.edu/sites/default/files/images/Solar_wind.gif" },
                     { label: "Blackouts", value: "Strong geomagnetic storms can induce electric currents in power lines, potentially causing blackouts.", hoverMedia: "https://cdn.pixabay.com/video/2016/10/12/5925-187109675_large.mp4" },
-                    { label: "Auroras", value: "Auroras are beautiful light displays caused by solar wind particles colliding with Earth's atmosphere.", hoverMedia: "images/17506.jpg" }
+                    { label: "Disruption of Satellite Systems and GPS", value: "Increases atmospheric drag on satellites, disrupting GPS and communication systems.", hoverMedia: "https://cdn.pixabay.com/video/2024/09/17/231918_large.mp4" },
+                    { label: "Auroras", value: "Charged particles collide with Earth's atmosphere, creating the Northern and Southern Lights.", hoverMedia: "https://cdn.pixabay.com/video/2021/10/05/90877-629483574_large.mp4" }
+                ]
+            },
+            {
+                title: "Coronal Mass Ejections (CMEs)",
+                video: "https://i.makeagif.com/media/10-10-2016/1jNIfI.gif",
+                data: [
+                    { label: "Earth", value: "When the ejection is directed towards Earth and reaches it as an interplanetary CME (ICME), the shock wave of traveling mass causes a geomagnetic storm that may disrupt Earth's magnetosphere, compressing it on the day side and extending the night-side magnetic tail.", hoverMedia: "https://64.media.tumblr.com/6099c55bb5d1b6594de21c73fcfc9a02/tumblr_ooveqwN6Aj1vjhboso2_400.gifv" }
+                ]
+            },
+            {
+                title: "Solar Flares",
+                video: "https://svs.gsfc.nasa.gov/vis/a010000/a010100/a010109/10109_SDO_Wavelength_H264_960x720_29.97_Apple_TV.webmhd.webm",
+                data: [
+                    { label: "A-class solar flares", value: "The weakest type of solar flare, with no significant impact on Earth.", hoverMedia: "https://sdo.gsfc.nasa.gov/assets/img/latest/latest_1024_0211.jpg" },
+                    { label: "B-class solar flares", value: "Very weak flares with little to no impact on Earth's environment.", hoverMedia: "https://sdo.gsfc.nasa.gov/assets/img/latest/latest_1024_0335.jpg" },
+                    { label: "C-class solar flares", value: "Small with few noticeable consequences on Earth.", hoverMedia: "https://sdo.gsfc.nasa.gov/assets/img/latest/latest_256_0094.jpg" },
+                    { label: "M-class solar flares", value: "Can cause brief radio blackouts that affect Earth's polar regions and minor radiation storms.", hoverMedia: "https://sdo.gsfc.nasa.gov/assets/img/latest/latest_256_0171.jpg" },
+                    { label: "X-class solar flares", value: "Create long lasting radiation storms that can harm satellites, communications systems, and even power grids.", hoverMedia: "https://sdo.gsfc.nasa.gov/assets/img/latest/latest_256_0304.jpg" }
+                ]
+            },
+            {
+                title: "Coronal Holes",
+                video: "https://sdo.gsfc.nasa.gov/assets/gallery/preview/Cor_hole_May.jpg",
+                data: [
+                    { label: "Enhanced Solar Wind", value: "Coronal holes release streams of high-speed solar wind, which can travel through space and reach Earth.", hoverMedia: "https://www.aeronomie.be/sites/default/files/styles/annual_report_chapter_image/public/2019-07/SolarWind.png?itok=ON60emDM" },
+                    { label: "Increased Cosmic Radiation for Air Travel", value: "The enhanced solar wind from coronal holes can increase cosmic radiation levels, particularly for aircraft flying at high altitudes and polar routes. This can pose a health risk for frequent flyers and airline crew", hoverMedia: "https://www.esa.int/var/esa/storage/images/esa_multimedia/images/2014/02/earth_s_protective_shield/14265082-1-eng-GB/Earth_s_protective_shield_pillars.jpg" }
                 ]
             }
         ];
 
-        let currentComponentIndex = 0;
+        let currentIndex = 0;
 
-        function changeComponent(direction) {
-            currentComponentIndex += direction;
-            if (currentComponentIndex < 0) {
-                currentComponentIndex = components.length - 1;
-            } else if (currentComponentIndex >= components.length) {
-                currentComponentIndex = 0;
-            }
-            updateComponent();
-        }
+        function renderComponent(index) {
+            const component = components[index];
+            const container = document.getElementById('componentContainer');
+            const isVideo = component.video.endsWith('.mp4') || component.video.endsWith('.webm');
+            const isGif = component.video.endsWith('.gif');
+            const isSolarFlares = component.title === "Solar Flares";
 
-        function updateComponent() {
-            const component = components[currentComponentIndex];
-            const container = document.getElementById("componentContainer");
             container.innerHTML = `
                 <div class="component-card">
                     <div class="card-header">${component.title}</div>
-                    <div class="video-container solar-flares">
-                        <video src="${component.video}" controls></video>
+                    <div class="video-container ${isSolarFlares ? 'solar-flares' : ''}" id="videoContainer">
+                        ${isVideo ? 
+                            `<video id="mainVideo" src="${component.video}" autoplay loop muted></video>` :
+                            isGif ?
+                            `<img id="mainGif" src="${component.video}" alt="${component.title} GIF" />` :
+                            `<img id="mainImage" src="${component.video}" alt="${component.title} Image" />`
+                        }
+                        
+                        <video class="hover-media" id="hoverVideo" loop muted></video>
+                        <img class="hover-media" id="hoverGif" alt="Hover GIF" />
                     </div>
                     <ul class="data-list">
-                        ${component.data.map(item => `
-                            <li>
-                                <span class="data-label">${item.label}</span>: ${item.value}
+                        ${component.data.map((item, idx) => `
+                            <li class="data-item">
+                                <span class="data-label" onmouseover="showHoverMedia(${index}, ${idx})" onmouseout="hideHoverMedia()">${item.label}:</span> ${item.value}
                             </li>
                         `).join('')}
                     </ul>
                 </div>
             `;
+
+            // Ensure video autoplay works
+            const mainVideo = document.getElementById('mainVideo');
+            if (mainVideo) {
+                mainVideo.play().catch(error => console.log("Autoplay was prevented:", error));
+            }
         }
 
-        updateComponent();
+        function showHoverMedia(componentIndex, dataIndex) {
+    const hoverVideo = document.getElementById('hoverVideo');
+    const hoverGif = document.getElementById('hoverGif');
+    const media = components[componentIndex].data[dataIndex].hoverMedia;
+
+    if (media.endsWith('.mp4')) {
+        hoverGif.style.display = 'none';
+        hoverVideo.src = media;
+        hoverVideo.style.display = 'block';
+        hoverVideo.play();
+        hoverVideo.classList.add('zoomed-out');
+    } else {
+        hoverVideo.style.display = 'none';
+        hoverGif.src = media;
+        hoverGif.style.display = 'block';
+        hoverGif.classList.add('zoomed-out');
+    }
+}
+
+function hideHoverMedia() {
+    const hoverVideo = document.getElementById('hoverVideo');
+    const hoverGif = document.getElementById('hoverGif');
+
+    hoverVideo.style.display = 'none';
+    hoverVideo.pause();
+    hoverGif.style.display = 'none';
+
+    hoverVideo.classList.remove('zoomed-out');
+    hoverGif.classList.remove('zoomed-out');
+}
+
+
+        function changeComponent(direction) {
+        currentIndex = (currentIndex + direction + components.length) % components.length;
+        renderComponent(currentIndex);
+
+        }
+
+        // Initial render
+        renderComponent(currentIndex);
     </script>
+
+<!--     <script src="JS/background.js"></script> -->
 </body>
 </html>
